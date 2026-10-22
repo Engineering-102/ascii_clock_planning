@@ -84,7 +84,7 @@ elif clock_type==24:
         Line_three={0: f"0 0", 1: f" 1 ", 2: f"222", 3: f"333", 4: f"444", 5: f"555", 6: f"666", 7: f"  7", 8: f"888", 9: f"999", 12: f"AAA", 11: f"PPP"}
         Line_four={0: f"0 0", 1: f" 1 ", 2: f"2  ", 3: f"  3", 4: f"  4", 5: f"  5", 6: f"6 6", 7: f"  7", 8: f"8 8", 9: f"  9", 12: f"A A", 11: f"P  "}
         Line_five={0: f"000", 1: f"111", 2: f"222", 3: f"333", 4: f"  4", 5: f"555", 6: f"666", 7: f"   7", 8: f"888", 9: f"999", 12: f"A A", 11: f"P  "}
-        if hour_10==1: # If the hour is 10, 11, or 12, it will print out the first digit of the hour as well as the second digit of the hour
+        if hour_10==1 or hour_10==2: # If the hour is 10, 11, or 12, it will print out the first digit of the hour as well as the second digit of the hour
             print(Line_one[hour_10]+" "+Line_one[hour_1]+"   "+Line_one[minutes_10]+" "+Line_one[minutes_1])
             print(Line_two[hour_10]+" "+Line_two[hour_1]+" "+":"+" "+Line_two[minutes_10]+" "+Line_two[minutes_1])
             print(Line_three[hour_10]+" "+Line_three[hour_1]+"   "+Line_three[minutes_10]+" "+Line_three[minutes_1])
@@ -102,7 +102,7 @@ elif clock_type==24:
         Line_three={0: f"{char} {char}", 1: f" {char} ", 2: f"{char}{char}{char}", 3: f"{char}{char}{char}", 4: f"{char}{char}{char}", 5: f"{char}{char}{char}", 6: f"{char}{char}{char}", 7: f"  {char}", 8: f"{char}{char}{char}", 9: f"{char}{char}{char}", 12: f"AAA", 11: f"PPP"}
         Line_four={0: f"{char} {char}", 1: f" {char} ", 2: f"{char}  ", 3: f"  { char }", 4: f"  { char }", 5: f"  { char }", 6: f"{ char } { char }", 7: f"  { char }", 8: f"{ char } { char }", 9: f"  {char}", 12: f"A A", 11: f"P  "}
         Line_five={0: f"{char}{char}{char}", 1: f"{char}{char}{char}", 2: f"{char}{char}{char}", 3: f"{char}{char}{char}", 4: f"  {char}", 5: f"{char}{char}{char}", 6: f"{char}{char}{char}", 7: f"  {char}", 8: f"{char}{char}{char}", 9: f"{char}{char}{char}", 12: f"A A", 11: f"P  "}
-        if hour_10==1: # If the hour is 10, 11, or 12, it will print out the first digit of the hour as well as the second digit of the hour
+        if hour_10==1 or hour_10==2: # If the hour is 10, 11, or 12, it will print out the first digit of the hour as well as the second digit of the hour
             print(Line_one[hour_10]+" "+Line_one[hour_1]+"   "+Line_one[minutes_10]+" "+Line_one[minutes_1])
             print(Line_two[hour_10]+" "+Line_two[hour_1]+" "+":"+" "+Line_two[minutes_10]+" "+Line_two[minutes_1])
             print(Line_three[hour_10]+" "+Line_three[hour_1]+"   "+Line_three[minutes_10]+" "+Line_three[minutes_1])
