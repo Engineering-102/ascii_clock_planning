@@ -1,0 +1,40 @@
+# By submitting this assignment, I agree to the following:
+# "Aggies do not lie, cheat, or steal, or tolerate those who do."
+# "I have not given or received any unauthorized aid on this assignment."
+#
+# Names:  Tyler Haidaczuk
+# Jai Joshi
+# Benjamin Sparks
+# NA
+# Section: 571
+# Assignment: Lab Topic 8 Team
+# Date: 20 October 2026
+#
+# Takes input and breaks it down into usable variabqles for the clock. It also checks if the character is permitted and if the time is in 12 Hr or 24 Hr format.
+time = input("Enter the time: ")
+clock_type = int(input("Choose the clock type (12 or 24): "))
+char = input("Enter your preferred character: ")
+while char not in "abcdeghkmnopqrsuvwxyz@$&*= ":
+    char = input("Character not permitted! Try again: ")
+print()
+hour=int(int(time[0:2].strip(":")))
+hour_10=hour//10
+hour_1=hour%10
+minutes_10=int(time[-2])
+minutes_1=int(time[-1])
+# If in 12 Hr mode, convert the hour to 12 Hr format and set the morning variable to either AM or PM
+if clock_type==12:
+    if hour>12:
+        morning=11
+        hour=hour-12
+        hour_10=hour//10
+        hour_1=hour%10
+    elif hour==12:
+        morning=11
+    elif hour==0:
+        hour=hour+12
+        morning=12
+        hour_10=hour//10
+        hour_1=hour%10
+    else:
+        morning=12
